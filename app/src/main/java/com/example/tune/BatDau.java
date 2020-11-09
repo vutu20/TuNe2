@@ -436,17 +436,17 @@ ImageButton menu;
     public void showHelp(int timeRunHelp, int idHelp) {
         if (timeRunHelp == 4 && idHelp == R.id.help_5050) {
             if (trueCase == R.id.answer_A) {
-                btndapanb.setEnabled(false);
-                btndapanc.setEnabled(false);
+                btndapanb.setEnabled(false);btndapanb.setText("");
+                btndapanc.setEnabled(false);btndapanc.setText("");
             } else if (trueCase == R.id.answer_B) {
-                btndapana.setEnabled(false);
-                btndapand.setEnabled(false);
+                btndapana.setEnabled(false);btndapana.setText("");
+                btndapand.setEnabled(false);btndapand.setText("");
             } else if (trueCase == R.id.answer_C) {
-                btndapana.setEnabled(false);
-                btndapanb.setEnabled(false);
+                btndapana.setEnabled(false);btndapana.setText("");
+                btndapanb.setEnabled(false);btndapanb.setText("");
             } else if (trueCase == R.id.answer_D) {
-                btndapanc.setEnabled(false);
-                btndapana.setEnabled(false);
+                btndapanc.setEnabled(false);btndapanc.setText("");
+                btndapana.setEnabled(false);btndapana.setText("");
             }
             playSound(R.raw.s50);
             run = true;
