@@ -51,6 +51,7 @@ public class BatDau extends AppCompatActivity implements View.OnClickListener {
     private int idHelp;
     private Animation animationButton;
     private boolean checkPickAnswer;
+    private boolean help5050,helpcall,helpstop,helpaudient;
 ImageButton menu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +69,8 @@ ImageButton menu;
                 startActivity(it);
             }
         });
+        help5050=true;helpaudient=true;
+        helpcall=true;helpstop=true;
     }
 
     private void initView() {
@@ -140,6 +143,10 @@ ImageButton menu;
         btndapanb.setEnabled(true);
         btndapanc.setEnabled(true);
         btndapand.setEnabled(true);
+        imHelp_5050.setEnabled(true);
+        imHelp_audience.setEnabled(true);
+        imHelp_call.setEnabled(true);
+        imHelp_stop.setEnabled(true);
         dem = 30;
         switch (questions.get(i).getTrueCase()) {
             case 1:
@@ -156,7 +163,6 @@ ImageButton menu;
                 break;
         }
     }
-
     public void AnhXa() {
         edtcauhoi = findViewById(R.id.tvSoCau);
         edtloihoi = findViewById(R.id.txt_questions);
@@ -194,7 +200,7 @@ ImageButton menu;
             if (v.getId() == trueCase) {
                 check = true;
                 wait = 0;
-                coin = coin + 200 * (i + 1);
+                coin = coin + 100 * (i + 1);
             } else {
                 check = false;
                 wait = 0;
@@ -226,7 +232,6 @@ ImageButton menu;
             initDiaLogFinish(coin);
         }
     }
-
     private AsyncTask<Void, Integer, Void> asyncTask = new AsyncTask<Void, Integer, Void>() {
         @Override
         protected Void doInBackground(Void... params) {
