@@ -21,22 +21,26 @@
             android:layout_y="9dp"
             android:id="@+id/menu"
             android:background="@drawable/ic_menu_black_24dp" />
+
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_x="165dp"
-            android:layout_y="-1dp"
             android:id="@+id/imClock"
-            android:background="@drawable/time">
-        </ImageView>
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_x="172dp"
+            android:layout_y="5dp"
+            android:background="@drawable/time"></ImageView>
+
         <TextView
+            android:id="@+id/tv_timeDown"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_x="3dp"
+            android:layout_y="-1dp"
+            android:gravity="center"
             android:text="30"
             android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:id="@+id/tv_timeDown"/>
+            android:textSize="20sp" />
+
         <TextView
             android:id="@+id/edtdiem"
             android:layout_width="85dp"
